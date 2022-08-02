@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>echarts demo</title>
+    <script src="js/echarts.js"></script>
+</head>
+<body>
+    <!-- 为 echarts准备了一个定义了宽高的dom-->
+    <div id="main" style="width: 600px;height: 400px;"></div>
+</body>
+</html>
+<script>
+    // 获取画布
+    const main = document.getElementById('main')
+
+    // 初始化echarts实例
+    const myChart=echats.init(main)
+
+    // 定义图标数据
+    const option={
+        // 配置标题
+        title:{
+            text:'饼图',
+            subtext:'销售饼图',
+            left:'center'
+        },
+        // 配置提示
+        tooltip:{
+            left:'center',
+            top:'top',
+            data:[
+                '1',
+                'rose2',
+                'rose3',
+                'rose4',
+                'rose5',
+                'rose6',
+                'rose7',
+                'rose8'
+            ]
+        },
+        toolbox:{
+            show:false,
+            feature:{
+                mark:{show:true},
+                dataView:{show:true,readOnly:false},
+                restore:{show:true},
+                saveAsImage: { show: true }
+            }
+        },
+        legend:{
+            data:['新注册用户','新增订单','新增管理员']
+        },
+        // 配置X轴
+        xAxis:{
+            data:['2022-7-22','羊毛衫','雪纺衫','裤子','高跟鞋','袜子']
+        },
+        // 配置Y轴
+        yAxis:{},
+        // 配置图标series数据
+        series: [
+            {
+                name: 'Area Mode',
+                type: 'pie',
+                radius: [10, 120],
+                center: ['75%', '50%'],
+                roseType: 'area',
+                itemStyle: {
+                    borderRadius: 20
+                },
+                data: [
+                    { value: 30, name: 'rose 1' },
+                    { value: 28, name: 'rose 2' },
+                    { value: 26, name: 'rose 3' },
+                    { value: 24, name: 'rose 4' },
+                    { value: 22, name: 'rose 5' },
+                    { value: 20, name: 'rose 6' },
+                    { value: 18, name: 'rose 7' },
+                    { value: 16, name: 'rose 8' }
+                ]
+            }
+        ]
+    }
+
+    // 将图标数据绘制到画布上
+    myChart.setOption(option)
+</script>
