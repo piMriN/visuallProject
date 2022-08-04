@@ -12,7 +12,7 @@
     color: #1950c4;
     padding: 0 0.225rem;
     font-size: 0.250rem;
-    border-right: 0.025rem  solid #00f2f1;
+    border-right: 0.025rem solid #00f2f1;
 }
 .order .tabs a:first-child{
     padding-left: 0;
@@ -26,17 +26,17 @@
 .order .data{
     display: flex;
     justify-content: space-between;
-    margin-top: 0.25rem;
+    margin-top: 0.25rem;;
 }
 .order .data .item{
-    flex: 1;
+    flex : 1;
 }
-.order h4{
+.order h4 {
     font-size: 0.35rem;
     color: #fff;
     margin-bottom: 0.025rem;
 }
-.order span{
+.order span {
     display: block;
     color: #4c9bfd;
     font-size: 0.2rem;

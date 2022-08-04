@@ -1,5 +1,6 @@
 .sales{
     height: 3.1rem;
+
 }
 .sales .caption{
     display: flex;
@@ -20,7 +21,7 @@
     border-radius: 0.0375rem;
     color: #0bace6;
 }
-.sales .caption .tabs a.active{
+.sales  .caption .tabs  a.active {
     background-color: #4c9bfd;
     color: #fff;
 }
@@ -29,8 +30,8 @@
     flex-direction: column;
 }
 .sales .chart{
-    flex: 1;
-    margin-top: 0.0225rem;
+    flex : 1;
+    margin-top: 0.225rem;
 }
 .sales .chart .line{
     width: 100%;
